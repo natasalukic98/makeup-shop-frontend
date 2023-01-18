@@ -1,0 +1,55 @@
+.my-image {
+    margin: 10px auto;
+    width: 30vw;
+    height: 250px;
+    object-fit: scale-down;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 35px;
+
+}
+
+.description {
+    text-align: center;
+    font-style: italic;
+    min-height: 30px;
+    max-height: 30px;
+
+}
+
+.name {
+    text-align: center;
+    min-height: 50px;
+    max-height: 50px;
+    overflow: auto;
+    text-overflow: ellipsis;
+    line-height: normal;
+}
+
+input {
+    border: none;
+    width: 50px;
+    text-align: center;
+}
+
+input:focus {
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+    outline-offset: 0px;
+    outline: none;
+
+
+}
+
+.amount {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+

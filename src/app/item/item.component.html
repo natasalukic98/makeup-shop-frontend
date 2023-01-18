@@ -1,0 +1,23 @@
+<mat-card class="card">
+    <img mat-card-image class="my-image" src="{{item.image}}" alt="Photo of a makeup">
+    <mat-card-content>
+      <mat-card-title class="name">{{item.name}}</mat-card-title>
+    </mat-card-content>
+    <mat-card-content>
+      <p class="description">{{item.description}}   </p>
+    </mat-card-content>
+    <mat-card-content>
+        <p class="price">{{item.price | number : '1.2-2' }} KM </p>
+      </mat-card-content>
+    <mat-card-actions class="amount">
+      <label>Količina</label>
+        <input type="number" [(ngModel)]=orderAmount value=1 min="1"/>
+        <button mat-icon-button (click)="addToCart()">
+          <mat-icon>add_shopping_cart</mat-icon>
+        </button>
+    </mat-card-actions>
+  </mat-card>
+
+  
+
+  
