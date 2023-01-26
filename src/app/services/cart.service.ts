@@ -28,9 +28,10 @@ export class CartService {
   getCart(): Observable<OrderItem[]> {
     //this.clearLocalCart()
     const localCart = this.getLocalCart();
+    console.log(localCart);
     return of(localCart);
   }
-  
+
   addItem(orderItem: OrderItem): Observable<boolean> {
     if (this.cookieService.check('cart')) {
       this.localCart = JSON.parse(this.cookieService.get('cart'));
@@ -41,10 +42,19 @@ export class CartService {
       this.localCart.push(orderItem);
     }
     else {
-      this.localCart[index].amount+=orderItem.amount;
+      this.localCart[index].amount += orderItem.amount;
     }
 
     this.cookieService.set('cart', JSON.stringify(this.localCart));
     return of(true);
+  }
+
+  updateItems(orderItems: OrderItem[]) {
+    this.cookieService.set('cart', JSON.stringify(orderItems));
+  }
+
+  sendOrder(orderItems: OrderItem[]) {
+
+
   }
 }

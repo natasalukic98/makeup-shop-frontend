@@ -9,7 +9,7 @@
 }
 
 .price {
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     margin-top: 35px;
 
@@ -52,4 +52,3 @@ input:focus {
     flex-direction: row;
     justify-content: center
 }
-

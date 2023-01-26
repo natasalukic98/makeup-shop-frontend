@@ -9,6 +9,7 @@ export class OrderItem {
     constructor(amount: number, makeupItem: MakeupItem){
         this.amount = amount;
         this.makeupItem = makeupItem;
+        this.finalPrice = amount*makeupItem.price;
     }
 
 }

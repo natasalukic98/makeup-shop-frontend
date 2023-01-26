@@ -1,0 +1,36 @@
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon><span class="material-symbols-outlined">
+        diversity_1
+        </span></mat-icon>
+      <span routerLink="/aboutUs">O nama</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon><span class="material-symbols-outlined">
+        call
+        </span></mat-icon>
+      <span routerLink="/contact">Kontakt</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon><span class="material-symbols-outlined">
+        store
+        </span></mat-icon>
+      <span routerLink="/location">Poslovnice</span>
+    </button>
+  </mat-menu>
+   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" routerLink="/">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span class="example-spacer"></span>
+   <button mat-icon-button routerLink="/cart">
+     <mat-icon>shopping_cart</mat-icon>
+   </button>
+   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+  
+ </mat-toolbar>

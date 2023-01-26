@@ -5,12 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import { ResponsiveToolbarComponent } from './responsive-toolbar/responsive-toolbar.component';
-import { HomeComponent } from './home/home.component';
+import { ResponsiveToolbarComponent } from './components/responsive-toolbar/responsive-toolbar.component';
+import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ItemComponent } from './item/item.component';
+import { ItemComponent } from './components/item/item.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CartComponent } from './cart/cart.component';
+import { CartComponent } from './components/cart/cart.component';
+import { OrderComponent } from './components/order/order.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +24,11 @@ import { CartComponent } from './cart/cart.component';
     HomeComponent,
     ItemComponent,
     CartComponent,
+    OrderComponent,
+    FooterComponent,
+    AboutUsComponent,
+    ContactComponent,
+    LocationComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +38,8 @@ import { CartComponent } from './cart/cart.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    
+    
     
   ],
   providers: [],

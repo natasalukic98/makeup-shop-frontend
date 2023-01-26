@@ -1,0 +1,36 @@
+
+table {
+    min-width:1200px ;
+    margin: auto;
+    margin-top: 50px;
+   
+
+}
+th{
+    color: red;
+    text-align: center;
+}
+td{
+    text-align: center;
+    
+}
+
+tr.mat-mdc-footer-row td {
+    font-weight: bold;
+}
+
+.total {
+    text-align: center;
+    color: red;
+
+}
+.order-button{
+    display: flex;
+    justify-content: right;
+    margin-right: 200px;
+    margin-top: 1rem;
+}
+
+.amount{
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+.form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+mat-form-field {
+    min-width: 50vw;
+}
+
+.buttons {
+    text-align: center;
+    margin: 20px;
+    
+}
+
+.btn1 {
+    margin-right: 60px;
+}
+.orderTotal{
+}

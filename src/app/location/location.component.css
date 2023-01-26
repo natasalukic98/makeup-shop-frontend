@@ -1,0 +1,26 @@
+.text {
+    width: 70%;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+   line-height: normal;
+   text-align: justify;
+   text-align: center;
+}
+.header{
+    justify-content: center;
+}
+.location {
+    line-height: 25px;
+    font-size: 15px;
+    padding: 20px;
+    
+    ;
+}
+
+
+.city {
+    color:blue;
+    font-size: 18px;
+    
+}

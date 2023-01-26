@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MakeupItem } from '../models/MakeupItem';
-import { MakeupItemService } from '../services/makeup-item.service';
-import { OrderService } from '../services/order.service';
+import { MakeupItem } from '../../models/MakeupItem';
+import { MakeupItemService } from '../../services/makeup-item.service';
+import { OrderService } from '../../services/order.service';
 
 @Component({
   selector: 'app-home',

@@ -1,0 +1,34 @@
+<div class="form" [formGroup]="form">
+    <mat-form-field class="element" appearance="fill">
+        <mat-label>Ime</mat-label>
+        <input matInput formControlName="firstName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Prezime</mat-label>
+        <input matInput formControlName="lastName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Adresa</mat-label>
+        <input matInput formControlName="adress" >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Odaberite način dostave</mat-label>
+        <mat-select formControlName="deliveryType">
+            <mat-option *ngFor="let deliveryType of deliveryTypes" [value]="deliveryType.key">{{deliveryType.value}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Broj telefona</mat-label>
+        <input matInput formControlName="phone">
+        <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Unesite vaš email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" required>
+    </mat-form-field>
+
+</div>
+<div class="buttons">
+    <button class="btn1" mat-raised-button color="warn" routerLink="/cart">ODUSTANI <mat-icon>clear</mat-icon></button>
+    <button class="btn2" mat-raised-button color="warn" [disabled]="!form.valid" (click)="sendOrder()">POTVRDI <mat-icon>done</mat-icon></button>
+</div>
