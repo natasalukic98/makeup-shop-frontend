@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,10 +12,12 @@ import { ItemComponent } from './components/item/item.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
 import { OrderComponent } from './components/order/order.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import { ContactComponent } from './contact/contact.component';
-import { LocationComponent } from './location/location.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { LocationComponent } from './components/location/location.component';
+import { initializeKeycloak } from './util/app.init';
+import { KeycloakService, KeycloakAngularModule } from 'keycloak-angular';
 
 @NgModule({
   declarations: [
@@ -35,14 +37,19 @@ import { LocationComponent } from './location/location.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    KeycloakAngularModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    
-    
-    
+
   ],
-  providers: [],
+  providers: [
+    {provide: APP_INITIALIZER,
+      useFactory: initializeKeycloak,
+      multi: true,
+      deps: [KeycloakService]
+
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
